@@ -65,12 +65,13 @@ export default function Map() {
         if (mapRef.current && !isMapInitialized.current) {
             isMapInitialized.current = true;
 
-            const map = L.map(mapRef.current).setView([20.5937, 78.9629], 5);
+            const map = L.map(mapRef.current, { worldCopyJump: false, maxBounds: [[-90, -180], [90, 180]], maxBoundsViscosity: 1, minZoom: 1 }).setView([20.5937, 78.9629], 1);
             mapInstanceRef.current = map;
 
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '© OpenStreetMap contributors',
-                maxZoom: 19
+                maxZoom: 19,
+                noWrap: true
             }).addTo(map);
 
             const routingControl = (L as any).Routing.control({
