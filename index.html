@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Navigation App</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Leaflet Routing Machine CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    
+    <!-- Leaflet Control Geocoder CSS (for address search) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="map"></div>
+    <div id="controls">
+        <div id="inputs">
+            <input type="text" id="start" placeholder="Choose starting point">
+            <input type="text" id="destination" placeholder="Choose destination">
+        </div>
+        <div id="travel-modes">
+            <button id="driving" class="active"><img src="https://img.icons8.com/ios-filled/50/000000/car.png" alt="Driving"></button>
+            <button id="walking"><img src="https://img.icons8.com/ios-filled/50/000000/walking.png" alt="Walking"></button>
+            <button id="cycling"><img src="https://img.icons8.com/ios-filled/50/000000/bicycle.png" alt="Cycling"></button>
+        </div>
+        <button id="start-route">Start</button>
+        <button id="current-location"><img src="https://img.icons8.com/material-sharp/24/000000/near-me.png" alt="Current Location"></button>
+    </div>
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Leaflet Routing Machine JS -->
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    
+    <!-- Leaflet Control Geocoder JS -->
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    
+    <script src="app.js"></script>
+</body>
+</html>
